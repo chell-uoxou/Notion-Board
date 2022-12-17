@@ -83,6 +83,9 @@ export class NotionAdapter extends NotionClient {
             },
             Label: {
                 multi_select: issue.getLabelList()
+            },
+            Body: {
+                rich_text: issue.body()
             }
         } as any
     }
@@ -107,6 +110,9 @@ export class NotionAdapter extends NotionClient {
                 },
                 Label: {
                     multi_select: {}
+                },
+                Body: {
+                    rich_text: {}
                 }
             }
         })
