@@ -66,6 +66,7 @@ export class NotionAdapter extends NotionClient {
     }
 
     private prepareNotionProperty(issue: Issue) {
+        logger.info(issue.body())
         return {
             Name: {
                 title: [

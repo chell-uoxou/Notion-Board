@@ -141,6 +141,7 @@ class NotionAdapter extends NotionClient {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
     prepareNotionProperty(issue) {
+        logger_1.logger.info(issue.body());
         return {
             Name: {
                 title: [
