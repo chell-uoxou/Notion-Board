@@ -36,14 +36,14 @@ export class NotionAdapter extends NotionClient {
         if (!pageId) {
             return logger.warn(`could not find page with id: ${id}`)
         }
-        logger.info('Found page, contacting notion to update the page');
+        logger.info('Found page, contacting notion to update the page yo');
 
         // Updating the Notion Page according to the new Issue details. 
         await this._client.pages.update({
             page_id: pageId,
             properties: this.prepareNotionProperty(issue)
         });
-        logger.info(`Notion Page with ID: ${pageId} updated successfully`);
+        logger.info(`Notion Page with ID: ${pageId} updated successfully yo`);
         await this.sleep();
     }
 
